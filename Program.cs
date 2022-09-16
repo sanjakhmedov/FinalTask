@@ -23,6 +23,22 @@ string[] CheckArrLength(string[] arr)
             newArr[count] = arr[i];
             count++;
         }
+        else continue;
     }
     return newArr;
 }
+
+void PrintArray(string[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, "); // $"{Math.Round(array[i], 4)}, "
+    }
+    Console.Write(arr[arr.Length - 1]);
+    Console.WriteLine("]");
+}
+
+string[] newArray = CheckArrLength(array);
+PrintArray(array);
+PrintArray(newArray);
