@@ -9,3 +9,20 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+string[] array = { "Tashkent", "Ufa", "Osh", "Saint-Petersbourgh", "2U" };
+
+string[] CheckArrLength(string[] arr)
+{
+    int count = 0;
+    string[] newArr = new string[count];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            newArr[count] = arr[i];
+            count++;
+        }
+    }
+    return newArr;
+}
