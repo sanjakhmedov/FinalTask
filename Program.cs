@@ -24,6 +24,23 @@ int ArrLength(String[] arr)
     return count;
 }
 
+String[] ResultingArray(string[] arr)
+{
+    int counter = 0;
+    int len = ArrLength(arr);
+    String[] resArr = new String[len];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            resArr[counter] = arr[i];
+            counter++;
+        }
+    }
+    return resArr;
+}
+
 void PrintArray(String[] arr)
 {
     Console.Write("[");
@@ -32,9 +49,10 @@ void PrintArray(String[] arr)
         if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
     }
     Console.Write(arr[arr.Length - 1]);
-    Console.WriteLine("]");
+    Console.Write("]");
 }
 
 PrintArray(array);
-int newArrLength = ArrLength(array);
-Console.WriteLine(newArrLength);
+Console.Write(" -> ");
+String[] result = ResultingArray(array);
+PrintArray(result);
