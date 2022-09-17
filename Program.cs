@@ -9,9 +9,9 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-String[] array = { "Tashkent", "Ufa", "Osh", "Saint-Petersbourgh", "2U" };
+string[] array = { "Tashkent", "Ufa", "Osh", "Saint-Petersbourgh", "2U" };
 
-int ArrLength(String[] arr)
+int ArrLength(string[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -24,11 +24,11 @@ int ArrLength(String[] arr)
     return count;
 }
 
-String[] ResultingArray(string[] arr)
+string[] ResultingArray(string[] arr)
 {
     int counter = 0;
     int len = ArrLength(arr);
-    String[] resArr = new String[len];
+    string[] resArr = new string[len];
 
     for (int i = 0; i < arr.Length; i++)
     {
@@ -41,7 +41,7 @@ String[] ResultingArray(string[] arr)
     return resArr;
 }
 
-void PrintArray(String[] arr)
+void PrintArray(string[] arr)
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length - 1; i++)
@@ -54,5 +54,5 @@ void PrintArray(String[] arr)
 
 PrintArray(array);
 Console.Write(" -> ");
-String[] result = ResultingArray(array);
+string[] result = ResultingArray(array);
 PrintArray(result);
