@@ -9,36 +9,32 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-string[] array = { "Tashkent", "Ufa", "Osh", "Saint-Petersbourgh", "2U" };
+String[] array = { "Tashkent", "Ufa", "Osh", "Saint-Petersbourgh", "2U" };
 
-string[] CheckArrLength(string[] arr)
+int ArrLength(String[] arr)
 {
     int count = 0;
-    string[] newArr = new string[count];
-
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i].Length <= 3)
         {
-            newArr[count] = arr[i];
             count++;
         }
-        else continue;
     }
-    return newArr;
+    return count;
 }
 
-void PrintArray(string[] arr)
+void PrintArray(String[] arr)
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length - 1; i++)
     {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]}, "); // $"{Math.Round(array[i], 4)}, "
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
     }
     Console.Write(arr[arr.Length - 1]);
     Console.WriteLine("]");
 }
 
-string[] newArray = CheckArrLength(array);
 PrintArray(array);
-PrintArray(newArray);
+int newArrLength = ArrLength(array);
+Console.WriteLine(newArrLength);
